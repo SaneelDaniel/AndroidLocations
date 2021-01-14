@@ -47,6 +47,7 @@ public class LocationDB extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
+
         sqLiteDatabase.execSQL(CREATE_DB_TABLE);
     }
 
@@ -56,6 +57,7 @@ public class LocationDB extends SQLiteOpenHelper {
      */
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         db.execSQL("DROP TABLE IF EXISTS" + TABLE_NAME);
+        onCreate(db);
     }
 
     /**

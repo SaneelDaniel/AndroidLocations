@@ -75,7 +75,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 locationContentValues.put(LocationDB.MAP_ZOOM_LEVEL, mMap.getCameraPosition().zoom);
 
                 //insert operation with the data
-                getContentResolver().insert(LocationsContentProvider.CONTENT_URI, locationContentValues);
+                //getContentResolver().insert(LocationsContentProvider.CONTENT_URI, locationContentValues);
                 //LocationInsertTask begins
                 LocationInsertTask insertTask = new LocationInsertTask();
                 insertTask.doInBackground(locationContentValues);
